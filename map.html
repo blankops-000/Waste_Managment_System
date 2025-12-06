@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Points Map - Waste Management System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { min-height: 100vh; background-color: #f9fafb; }
+        header { background: linear-gradient(to right, #3b82f6, #10b981); color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .map-card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .map-placeholder { background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 12px; padding: 60px 20px; text-align: center; margin: 20px 0; }
+        .locations { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
+        .location { background: #f0f9ff; padding: 20px; border-radius: 12px; border-left: 4px solid #10b981; }
+        .back-link { color: #10b981; text-decoration: none; margin-bottom: 20px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <header>Collection Points Map</header>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <div class="map-card">
+            <h2>Find Nearby Collection Points</h2>
+            <div class="map-placeholder">
+                <div style="font-size: 48px; margin-bottom: 16px;">🗺️</div>
+                <h3>Interactive Map Coming Soon</h3>
+                <p>Map integration with real-time collection points will be available soon</p>
+            </div>
+            
+            <h3>Available Collection Points</h3>
+            <div class="locations">
+                <div class="location">
+                    <h4>🏢 Downtown Collection Center</h4>
+                    <p><strong>Address:</strong> 123 Main Street, Downtown</p>
+                    <p><strong>Hours:</strong> Mon-Fri 8AM-6PM</p>
+                    <p><strong>Types:</strong> All waste types accepted</p>
+                </div>
+                <div class="location">
+                    <h4>♻️ Recycling Hub North</h4>
+                    <p><strong>Address:</strong> 456 Green Avenue, North District</p>
+                    <p><strong>Hours:</strong> Daily 7AM-7PM</p>
+                    <p><strong>Types:</strong> Plastic, Paper, Glass, Metal</p>
+                </div>
+                <div class="location">
+                    <h4>💻 E-Waste Center</h4>
+                    <p><strong>Address:</strong> 789 Tech Boulevard, Industrial Zone</p>
+                    <p><strong>Hours:</strong> Tue-Sat 9AM-5PM</p>
+                    <p><strong>Types:</strong> Electronics, Batteries, Cables</p>
+                </div>
+                <div class="location">
+                    <h4>⚠️ Hazardous Waste Facility</h4>
+                    <p><strong>Address:</strong> 321 Safety Road, Outskirts</p>
+                    <p><strong>Hours:</strong> Wed-Fri 10AM-4PM</p>
+                    <p><strong>Types:</strong> Chemicals, Paint, Batteries</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

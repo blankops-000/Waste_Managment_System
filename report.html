@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Waste Issue - Waste Management System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { min-height: 100vh; background-color: #f9fafb; }
+        header { background: linear-gradient(to right, #3b82f6, #10b981); color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .form-card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; color: #374151; }
+        input, select, textarea { width: 100%; padding: 12px 16px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 16px; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #10b981; }
+        button { background: linear-gradient(to right, #10b981, #059669); color: white; padding: 12px 24px; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; }
+        button:hover { transform: translateY(-1px); }
+        .back-link { color: #10b981; text-decoration: none; margin-bottom: 20px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <header>Report Waste Issue</header>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <div class="form-card">
+            <form onsubmit="submitReport(event)">
+                <div class="form-group">
+                    <label>Title *</label>
+                    <input type="text" required placeholder="e.g., Illegal dumping on Main Street">
+                </div>
+                <div class="form-group">
+                    <label>Category *</label>
+                    <select required>
+                        <option value="plastic">🧴 Plastic</option>
+                        <option value="organic">🌿 Organic</option>
+                        <option value="electronic">💻 Electronic</option>
+                        <option value="hazardous">⚠️ Hazardous</option>
+                        <option value="general">🗑️ General</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description *</label>
+                    <textarea rows="4" required placeholder="Describe the waste issue in detail..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" placeholder="e.g., 123 Main St, City">
+                </div>
+                <div class="form-group">
+                    <label>Photo</label>
+                    <input type="file" accept="image/*">
+                </div>
+                <button type="submit">Submit Report →</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function submitReport(e) {
+            e.preventDefault();
+            alert('Report submitted successfully! Thank you for helping keep our environment clean.');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
